@@ -1,0 +1,32 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.14/peer.min.js"></script>
+    <script src="youtube.js"></script>
+    <script src="player.js"></script>
+</head>
+
+<body>
+    <div id="pcon">
+        Your PeerJS ID is <span id="pid">generating..</span>
+        <input class="button" type="button" value="Share" id="share" disabled>
+        <br> Connect to a peer:
+        <input type="text" id="rid" placeholder="Someone else's id">
+        <input class="button" type="button" value="Connect" id="connect" disabled>
+        <br>
+    </div>
+    <p id="status">Connect with someone and watch buffer free local videos together!</p>
+    <div id="drop_zone" hidden>
+        <br>enter a youtube url
+        <input type="text" id="yt">
+        <input class="button" type="button" value="Load" id="load">
+        <video id="really-cool-video" class="video-js vjs-default-skin" preload="auto" width="640" height="264" data-setup='{"techOrder":["youtube","html5"]}'>
+        </video>
+    </div>
+</body>
+
+</html>
